@@ -23,8 +23,18 @@ mva addition
     gardener.py  hwidthMVAVar -k 1   /home/amassiro/Latinos/Shape/tree_skim_all/nominals/latino_052_WW2JetsPhantom.root       /tmp/amassiro/latino_052_WW2JetsPhantom_new.root
     gardener.py  hwidthMVAVar -k 0   /tmp/amassiro/latino_052_WW2JetsPhantom_new.root                  /tmp/amassiro/latino_052_WW2JetsPhantom_new_2.root
 
-    gardener.py  hwidthMVAVar -F -r  /data/amassiro/LatinosTrees/2j/nominals_all/      /data/amassiro/LatinosTrees/2jewk_mva/nominals_all/
-    gardener.py  hwidthMVAVar -F -r  /data/amassiro/LatinosTrees/2j/wjets/             /data/amassiro/LatinosTrees/2jewk_mva/wjets/
+    mkdir /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/
+    gardener.py  hwidthMVAVar -k 1 -F -r  /home/amassiro/Latinos/Shape/tree_skim_all/nominals/             /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/nominals/
+    gardener.py  hwidthMVAVar -k 0 -F -r  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/nominals/      /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/nominals/
+
+    gardener.py  hwidthMVAVar -k 1 -F -r  /home/amassiro/Latinos/Shape/tree_skim_all/wjets/             /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/wjets/
+    gardener.py  hwidthMVAVar -k 0 -F -r  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/wjets/      /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/wjets/
+
+    gardener.py  hwidthMVAVar -k 1 -F -r  /home/amassiro/Latinos/Shape/tree_skim_all/data/             /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/data/
+    gardener.py  hwidthMVAVar -k 0 -F -r  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/data/      /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/data/
+
+
+gardener.py  hwidthMVAVar -F -r  /data/amassiro/LatinosTrees/2j/wjets/             /data/amassiro/LatinosTrees/2jewk_mva/wjets/
     gardener.py  hwidthMVAVar -F -r  /data/amassiro/LatinosTrees/2j/data/              /data/amassiro/LatinosTrees/2jewk_mva/data/
 
 
