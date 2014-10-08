@@ -1,14 +1,18 @@
 #include "HwidthMvaInCMSSW/GetHwidthMVA/interface/GetHwidthMVA.h"
 
-GetHwidthMVA::GetHwidthMVA():isInit(false){
-//  init(
-//    "MLP",
-//  getenv("CMSSW_BASE")+std::string("/src/HwidthMvaInCMSSW/GetHwidthMVA/data/TMVA_Hwidth_MLP.weights.xml")
-//      );
- init(
-   "BDTG",
- getenv("CMSSW_BASE")+std::string("/src/HwidthMvaInCMSSW/GetHwidthMVA/data/TMVA_Hwidth_BDTG.weights.xml")
-     );
+GetHwidthMVA::GetHwidthMVA(int version):isInit(false),version_(version){
+ if (version_==0) {
+  init(
+    "BDTG",
+  getenv("CMSSW_BASE")+std::string("/src/HwidthMvaInCMSSW/GetHwidthMVA/data/TMVA_Hwidth_ggH_BDTG.weights.xml")
+      );
+ }
+ if (version_==1) {
+  init(
+    "BDTG",
+  getenv("CMSSW_BASE")+std::string("/src/HwidthMvaInCMSSW/GetHwidthMVA/data/TMVA_Hwidth_bkg_BDTG.weights.xml")
+      );
+ }
 }
 
 GetHwidthMVA::~GetHwidthMVA(){

@@ -6,7 +6,7 @@
 class GetHwidthMVA {
 
  public:
-  GetHwidthMVA();
+  GetHwidthMVA(int version);
   ~GetHwidthMVA();
 
   void init(std::string methodName, std::string weightsfile);
@@ -34,6 +34,10 @@ class GetHwidthMVA {
   std::string methodname_;
 
   bool isInit;
+
+  int version_;
+  // 0 =    off-shell vs on-shell
+  // 1 =    off-shell vs background
 
 };
 
