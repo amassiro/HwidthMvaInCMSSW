@@ -13,7 +13,8 @@ Hwidth Mva in cmssw
 
         gardener.py  hwidthMVAVar  -s 1  -r /home/amassiro/Latinos/Shape/tree_skim_wwmin_2j_TEMP/wjetsTemplate  /home/amassiro/Latinos/Shape/tree_skim_wwmin_2j_wwewk/wjetsTemplate
 
-        ls /home/amassiro/Latinos/Shape/tree_skim_wwmin_2j_TEMP/ --color=none | awk '{print "gardener.py  hwidthMVAVar -F -r /home/amassiro/Latinos/Shape/tree_skim_wwmin_2j_TEMP/"$1"  /home/amassiro/Latinos/Shape/tree_skim_wwmin_2j_wwewk/"$1}'
+        ls /home/amassiro/Latinos/Shape/tree_skim_all/ --color=none | awk '{print "gardener.py  hwidthMVAVar -k 1 -F -r  /home/amassiro/Latinos/Shape/tree_skim_all/"$1"  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/"$1}'
+        ls /home/amassiro/Latinos/Shape/tree_skim_all/ --color=none | awk '{print "gardener.py  hwidthMVAVar -k 0 -F -r  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/"$1"  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/"$1}'
 
 
 
@@ -34,8 +35,34 @@ mva addition
     gardener.py  hwidthMVAVar -k 0 -F -r  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/data/      /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/data/
 
 
-gardener.py  hwidthMVAVar -F -r  /data/amassiro/LatinosTrees/2j/wjets/             /data/amassiro/LatinosTrees/2jewk_mva/wjets/
-    gardener.py  hwidthMVAVar -F -r  /data/amassiro/LatinosTrees/2j/data/              /data/amassiro/LatinosTrees/2jewk_mva/data/
+
+
+
+
+
+
+    gardener.py  hwidthMVAVar -k 1 -F -r  /home/amassiro/Latinos/Shape/tree_skim_all/electronResolution  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/electronResolution
+    gardener.py  hwidthMVAVar -k 1 -F -r  /home/amassiro/Latinos/Shape/tree_skim_all/electronScale_down  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/electronScale_down
+    gardener.py  hwidthMVAVar -k 1 -F -r  /home/amassiro/Latinos/Shape/tree_skim_all/electronScale_up  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/electronScale_up
+    gardener.py  hwidthMVAVar -k 1 -F -r  /home/amassiro/Latinos/Shape/tree_skim_all/jetEnergyScale_down  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/jetEnergyScale_down
+    gardener.py  hwidthMVAVar -k 1 -F -r  /home/amassiro/Latinos/Shape/tree_skim_all/jetEnergyScale_up  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/jetEnergyScale_up
+    gardener.py  hwidthMVAVar -k 1 -F -r  /home/amassiro/Latinos/Shape/tree_skim_all/metResolution  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/metResolution
+    gardener.py  hwidthMVAVar -k 1 -F -r  /home/amassiro/Latinos/Shape/tree_skim_all/muonScale_down  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/muonScale_down
+    gardener.py  hwidthMVAVar -k 1 -F -r  /home/amassiro/Latinos/Shape/tree_skim_all/muonScale_up  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/muonScale_up
+    gardener.py  hwidthMVAVar -k 1 -F -r  /home/amassiro/Latinos/Shape/tree_skim_all/vgTemplate  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/vgTemplate
+
+    templates -> is symbolic link
+    gardener.py  hwidthMVAVar -k 1 -F -r  /home/amassiro/Latinos/Shape/tree_skim_all/nominals  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/nominals
+    gardener.py  hwidthMVAVar -k 1 -F -r  /home/amassiro/Latinos/Shape/tree_skim_all/wjets  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/wjets
+
+
+
+    cd templates
+    ln -s ../vgTemplate/*root .
+    ln -s ../nominals/*root .
+
+
+
 
 
 
