@@ -17,8 +17,6 @@ class GetHwidthMVA {
                   double pt2,
                   double dphill,
                   double pfmet);
-   
-
 
   TMVA::Reader* theReader;
 
