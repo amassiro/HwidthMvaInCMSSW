@@ -88,7 +88,7 @@ New samples:
 
     gardener.py  hwidthMVAVar -k 1  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/nominals/latino_160_qqww1smEM_baseW.root  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/nominals/
 
-    ls /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/nominals/*qqww*_baseW.root.temp.root | tr "." " " | awk '{print "gardener.py  higgsWWVar -k 1 "$1".root.temp.root "$1".root"}'
+    ls /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/nominals/*qqww*_baseW.root.temp.root | tr "." " " | awk '{print "gardener.py  hwidthMVAVar -k 1 "$1".root.temp.root "$1".root"}'
 
 
     gardener.py  hwidthMVAVar -k 1  /home/amassiro/Latinos/Shape/tree_skim_all/electronResolution/latino_160_qqww1smEM_baseW.root  /home/amassiro/Latinos/Shape/tree_skim_all_hwidth/electronResolution/
@@ -162,6 +162,7 @@ New samples:
     sh /home/amassiro/Latinos/CMSSW_5_3_11_patch6/src/HwidthMvaInCMSSW/do1.sh
     sh /home/amassiro/Latinos/CMSSW_5_3_11_patch6/src/HwidthMvaInCMSSW/do2.sh
     sh /home/amassiro/Latinos/CMSSW_5_3_11_patch6/src/HwidthMvaInCMSSW/do2.sh
+    sh /home/amassiro/Latinos/CMSSW_5_3_11_patch6/src/HwidthMvaInCMSSW/do5.sh
 
 
 To be removed from xml
